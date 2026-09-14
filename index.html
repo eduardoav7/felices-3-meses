@@ -6,7 +6,6 @@
     <title>Felices 3 meses, mi princesita hermosa 💞</title>
     <style>
         body {
-            /* Un degradado hermoso de rosa clarito a azul */
             background: linear-gradient(135deg, #FFB6C1, #ADD8E6); 
             font-family: 'Arial', sans-serif;
             text-align: center;
@@ -17,61 +16,59 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding: 20px 0;
         }
         .container {
-            background: rgba(255, 255, 255, 0.85);
-            padding: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
             border-radius: 20px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.15);
             max-width: 500px;
             width: 85%;
         }
         h1 { 
-            color: #d63384; /* Rosa un poco más fuerte para que resalte */
+            color: #d63384; 
             margin-bottom: 5px;
+            font-size: 1.6em;
         }
         .fecha {
             font-size: 0.9em;
             color: #6c757d;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
-        /* Diseño del botón de música */
-        .btn-musica {
-            background-color: #d63384;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 25px;
-            font-size: 1em;
-            font-weight: bold;
-            cursor: pointer;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(214, 51, 132, 0.3);
-            transition: transform 0.3s ease, background-color 0.3s;
+        /* Estilo para el reproductor de video */
+        .video-container {
+            margin: 15px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 3px dashed #FFB6C1;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            background: #000;
         }
-        .btn-musica:hover {
-            background-color: #ff69b4;
-            transform: scale(1.05);
+        video {
+            width: 100%;
+            max-height: 250px;
+            display: block;
         }
         .menu {
             display: flex;
             flex-direction: column;
-            gap: 15px;
-            margin-top: 25px;
+            gap: 12px;
+            margin-top: 20px;
         }
         .btn {
-            background-color: #87CEFA; /* Azul clarito */
+            background-color: #87CEFA; 
             color: #ffffff;
-            padding: 15px;
+            padding: 12px;
             text-decoration: none;
             border-radius: 30px;
-            font-size: 1.1em;
+            font-size: 1.05em;
             font-weight: bold;
             transition: all 0.3s ease;
-            border: 2px solid #FFB6C1; /* Borde rosa clarito */
+            border: 2px solid #FFB6C1; 
         }
         .btn:hover {
-            background-color: #FFC0CB; /* Cambia a rosa al pasar el mouse */
+            background-color: #FFC0CB; 
             color: #ffffff;
             transform: scale(1.05);
             border-color: #87CEFA;
@@ -83,17 +80,15 @@
         <h1>Felices 3 meses, mi princesita hermosa 💞</h1>
         <p class="fecha">14 de junio 2026, el dia que cambio mi vida para siempre</p>
         
-        <!-- Aquí está el audio oculto -->
-        <audio id="musicaFondo" loop>
-            <source src="cancion.mp3" type="audio/mpeg">
-        </audio>
-        
-        <!-- Botón para reproducir la canción -->
-        <button class="btn-musica" onclick="document.getElementById('musicaFondo').play(); this.style.display='none';">
-            🎵 Toca aquí para una sorpresa 🎵
-        </button>
+        <!-- Reproductor del video de Hakuji y Koyuki -->
+        <div class="video-container">
+            <video controls>
+                <source src="video.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        </div>
 
-        <p>¿Qué deseas ver primero?</p>
+        <p style="font-size: 0.95em; margin: 10px 0;">¿Qué deseas ver primero?</p>
 
         <div class="menu">
             <a href="carta.html" class="btn">💌 Una carta para ti</a>
