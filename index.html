@@ -35,6 +35,24 @@
             color: #6c757d;
             margin-bottom: 20px;
         }
+        /* Diseño del botón de música */
+        .btn-musica {
+            background-color: #d63384;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(214, 51, 132, 0.3);
+            transition: transform 0.3s ease, background-color 0.3s;
+        }
+        .btn-musica:hover {
+            background-color: #ff69b4;
+            transform: scale(1.05);
+        }
         .menu {
             display: flex;
             flex-direction: column;
@@ -64,6 +82,17 @@
     <div class="container">
         <h1>Felices 3 meses, mi princesita hermosa 💞</h1>
         <p class="fecha">14 de junio 2026, el dia que cambio mi vida para siempre</p>
+        
+        <!-- Aquí está el audio oculto -->
+        <audio id="musicaFondo" loop>
+            <source src="cancion.mp3" type="audio/mpeg">
+        </audio>
+        
+        <!-- Botón para reproducir la canción -->
+        <button class="btn-musica" onclick="document.getElementById('musicaFondo').play(); this.style.display='none';">
+            🎵 Toca aquí para una sorpresa 🎵
+        </button>
+
         <p>¿Qué deseas ver primero?</p>
 
         <div class="menu">
